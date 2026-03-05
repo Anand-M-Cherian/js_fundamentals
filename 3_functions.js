@@ -1,40 +1,40 @@
-// // First class citizens
+// First class citizens
 
-// // Assigned to variables
-// // Unlike direct function declaration which is fully hoisted, when functions are assigned to variables they are hoisted in TDZ in case let and var
-// let sum = function (a, b) {
-//     return a + b;
-// };
-// console.log(sum);
-// console.log(sum(2, 3));
+// Assigned to variables
+// Unlike direct function declaration which is fully hoisted, when functions are assigned to variables they are hoisted in TDZ in case let and var
+let sum = function (a, b) {
+    return a + b;
+};
+console.log(sum);
+console.log(sum(2, 3));
 
-// function diff(a, b) {
-//     return a - b;
-// }
+function diff(a, b) {
+    return a - b;
+}
 
-// // Higher order functions: functions which take functions as arguments or return functions
-// console.log("=== Higher Order Functions ===");
-// function operate(operation, a, b) {
-//     return operation(a, b);
-// }
-// console.log(operate(diff, 3, 1));
+// Higher order functions: functions which take functions as arguments or return functions
+console.log("=== Higher Order Functions ===");
+function operate(operation, a, b) {
+    return operation(a, b);
+}
+console.log(operate(diff, 3, 1));
 
-// function outer() {
-//     function inner() {
-//         console.log("inner");
-//     }
-//     return inner;
-// }
-// let returnedFuncVar = outer();
-// console.log(returnedFuncVar);
-// returnedFuncVar();
+function outer() {
+    function inner() {
+        console.log("inner");
+    }
+    return inner;
+}
+let returnedFuncVar = outer();
+console.log(returnedFuncVar);
+returnedFuncVar();
 
-// // Arror Functions
-// console.log("=== Arrow Functions ===");
-// let mul = (a, b) => {
-//     return a * b;
-// };
-// let div = (a, b) => a / b; // {} not required if only one line
+// Arror Functions
+console.log("=== Arrow Functions ===");
+let mul = (a, b) => {
+    return a * b;
+};
+let div = (a, b) => a / b; // {} not required if only one line
 
 //  Closures --> function + lexical scope
 function outer() {
